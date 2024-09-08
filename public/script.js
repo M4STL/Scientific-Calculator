@@ -55,7 +55,7 @@ function toggleParenthesis() {
     const display = document.getElementById('display');
     const currentValue = display.value;
     
-    // Count the number of opening and closing parentheses in the current display value
+    
     const openParenCount = (currentValue.match(/\(/g) || []).length;
     const closeParenCount = (currentValue.match(/\)/g) || []).length;
 
@@ -63,7 +63,7 @@ function toggleParenthesis() {
     if (openParenCount > closeParenCount) {
         display.value += ')';
     } else {
-        // Otherwise, add an opening parenthesis
+       
         display.value += '(';
     }
 }
@@ -72,35 +72,9 @@ function base2Log() {
     if (!display.value.endsWith('log2(')) {
         display.value += "log2(";
     }
-   // calcbase2log();
+   
 }
-/*function calcbase2log() {
-    try {
-        let expression = display.value;
-        // Handle 'log2('
-        let match = expression.match(/log2\(([^)]+)\)/);
-        if (match) {
-            let value = parseFloat(match[1]);
-            if (!isNaN(value) && value > 0) { // Ensure the value is positive
-                // Calculate log base 2
-                let result = Math.log(value) / Math.log(2);
-                // Format result to 8 decimal places
-                result = result.toFixed(8);
-                display.value = expression.replace(/log2\([^\)]+\)/, result);
-                addToHistory(`${expression} = ${result}`);
-            } else {
-                display.value = 'Error: Invalid Input';
-            }
-           
-        } else {
-            display.value = 'Error';
-        }
-    } catch (e) {
-        // Handle errors
-        display.value = 'Error';
-        console.error(e);
-    }
-}*/
+
 
 function showHistory() {
     fetch('/getHistory')
@@ -156,9 +130,9 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleHistoryBtn.addEventListener('click', function(event) {
         const isVisible = historyBox.style.display ==='block';
         historyBox.style.display = isVisible ? 'none' : 'block';
-       // historyBox.style.display = historyBox.style.display === 'block' ? 'none' : 'block';
+      
        history.classList.toggle('active',!isVisible);
-        event.stopPropagation(); // Prevent event from bubbling up to document
+        event.stopPropagation(); 
     });
 
     // Hide history-box when clicking outside of it
