@@ -1,0 +1,156 @@
+body{
+	background-image: url('background-image.jpg');
+	background-size: cover;
+	background-repeat: no-repeat ;
+	background-position: center;
+	font-family: 'Arial', sans-serif;
+	
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 5px;	
+	padding: 0;
+}
+.wrapper1{
+	
+	display: flex;
+	padding-top: 15px;
+    
+}
+.widget-wrapper1{
+	
+	margin: 0 8px 8px 8px;
+	
+
+}
+.wrapper-1-title{
+	font-weight: bold;
+	justify-content: left;	
+
+}
+.history{
+	
+	background-color:  rgba(182, 226, 138,0.6);
+	width: 100%;
+	height: 80%;
+	
+}
+.history.active {
+    background-color: rgba(88, 142, 155, 0.6); /* Change color when history-box is visible */
+}
+
+.history-box{
+	
+	
+	border: 2px solid rgb(49, 49, 60);
+	max-height: 400px;
+	max-width: 500px;
+	overflow: auto;
+   
+    padding: 10px; 
+   margin-top: 10px;
+   border-radius: 5px;  
+   display: none; /* Initially hide the history box */
+    position: absolute; /* Allow it to be positioned absolutely */
+    z-index: 100;
+	
+}
+.history p{
+	color: rgba(200, 200, 200, 0.5);
+}
+.history-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.history-box::-webkit-scrollbar-track {
+    background: rgba(200, 200, 200, 0.5);
+    border-radius: 5px;
+}
+
+.history-box::-webkit-scrollbar-thumb {
+    background-color: rgba(90, 90, 90, 0.8); 
+    border-radius: 5px; 
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+}
+
+.history-box::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(70, 70, 70, 0.8); 
+}
+
+
+.history-box {
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(90, 90, 90, 0.8) rgba(200, 200, 200, 0.5); 
+}
+
+.wrapper2{
+	
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.widget-wrapper2{
+	
+	margin: 5px;
+	flex: 1;
+	justify-content: right;
+	align-items: center;
+	
+}
+table {
+	width: 600px;
+	border: 5px solid black;
+	padding: 15px 15px 15px 15px;
+	
+	background-color: rgba(255, 255, 255, 0.8); 
+	border-collapse: separate; /* This ensures that the padding works properly */
+    border-spacing: 10px; /* Adjust this value for space between cells */
+    
+    border-radius: 10px;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+	perspective: 1000px;
+}
+
+input[type="button"] {
+	width: 100px;
+	height: 50px;
+	padding: 15px;
+	margin: 2px ;
+
+	background-color: rgba(65, 104, 113, 0.959);
+	color: white;
+	font-size: 24px;
+	box-sizing: border-box;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	
+}
+input[type="button"]:hover{
+	background-color: #3e787f;
+}
+
+
+input[type="text"] {
+	
+	padding-top: 15px ;
+	padding-bottom:15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	border: 2px solid black;
+	text-align: center;
+	box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+#display {
+	text-align: right;
+	width: 100%;
+	background-color:rgba(255, 255, 255, 0.9) ;
+}
